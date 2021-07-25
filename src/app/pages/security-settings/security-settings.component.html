@@ -1,0 +1,65 @@
+
+
+<div class="recent-container">
+  <div class="recent-header">
+    <div class="recent-title">
+    <span>Security Settings</span>
+    </div>
+  </div>
+  <div class="recent-body">
+
+    <div *ngIf="resetOption == 0">
+      <div id="change-password-div">
+        <div class="row mb-2">
+          <div class="col-md-12">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="changePassword" name="securityOptionRadio" value="1" (click)="setSecurityOption(1)" [checked]="securityOption == 1">
+              <label class="form-check-label pointer" for="changePassword">
+                Change Password
+              </label>
+            </div>
+          </div>
+        </div>
+        <app-change-password [isChangingPassword]="securityOption != 1"></app-change-password>
+      </div>
+
+
+      <div class="pt-3 change-pin-div">
+        <div class="row mb-2">
+          <div class="col-md-12">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="changePin" name="securityOptionRadio" value="2" (click)="setSecurityOption(2)" [checked]="securityOption == 2">
+              <label class="form-check-label pointer" for="changePin">
+                Change PIN
+              </label>
+            </div>
+          </div>
+        </div>
+        <app-change-pin [isChangingPin]="securityOption != 2"></app-change-pin>
+      </div>
+    </div>
+
+
+    <app-reset-password *ngIf="resetOption == 1"></app-reset-password>
+    <app-reset-pin *ngIf="resetOption == 2"></app-reset-pin>
+    <div class="row pt-2">
+      <div class="col-sm-12">
+        <span (click)="setResetOption(0)" *ngIf="resetOption != 0"><a class="float-start">Go Back</a></span>
+        <span (click)="setResetOption(1)" *ngIf="resetOption < 1"><a class="float-end">Reset Password</a></span>
+        <span (click)="setResetOption(2)" *ngIf="resetOption < 1"><a class="float-start">Reset PIN</a></span>
+      </div>
+    </div>
+
+    <div class="row pt-2 pb-5" *ngIf="resetOption < 1">
+      <div class="col-8 col-md-4 form-floating">
+        <input [type]="isFieldOneTextVisible ? 'text' : 'password'" class="form-control float-end" name="pin" id="pin" placeholder="Input PIN">
+        <label for="pin">Input PIN</label>
+      </div>
+      <div class="col">
+        <button class="btn btn-primary float-end" >Initialize</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+

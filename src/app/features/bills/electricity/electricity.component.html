@@ -1,0 +1,55 @@
+<form id="electricityForm">
+  <div class="row pb-3">
+    <div class="col-sm-12 form-floating">
+      <select class="form-select" name="account" id="account">
+        <option value="a">Account A</option>
+      </select>
+      <label for="account">Select Account</label>
+    </div>
+  </div>
+  <div class="row pb-3">
+    <div class="col-sm-12 form-floating">
+      <select class="form-select" name="biller" id="biller">
+        <option value="a">Biller A</option>
+      </select>
+      <label for="biller">Select Biller</label>
+    </div>
+  </div>
+  <div class="row pb-3">
+    <div class="col-sm-12 form-floating">
+      <select class="form-select" name="meterType" id="meterType">
+        <option value="a">Meter A</option>
+      </select>
+      <label for="meterType">Select Meter Type</label>
+    </div>
+  </div>
+  <div class="row pb-3">
+    <div class="col-sm-9 form-floating">
+      <input type="text" class="form-control" placeholder="Meter Number" name="meterNumber">
+      <label for="meterNumber">Meter Number</label>
+    </div>
+    <div class="col-sm-3 form-floating d-flex justify-content-end align-items-center">
+      <span class="pointer primary-text bold-text float-end">Verify</span>
+    </div>
+  </div>
+  <div class="row pb-3">
+    <div class="col-sm-12 form-floating">
+      <input type="text" class="form-control" placeholder="Customer Name" name="customerName">
+      <label for="customerName">Customer Name</label>
+    </div>
+  </div>
+  <div class="row pb-3">
+    <div class="col-sm-12 form-floating">
+      <input type="text" class="form-control" placeholder="Amount" name="amount">
+      <label for="amount">Amount</label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="d-grid gap-3 d-md-flex justify-content-md-end">
+      <button type="button" class="btn btn-primary" routerLink="/dashboard">Cancel</button>
+      <button type="button" class="btn btn-primary">Confirm Purchase </button>
+      <button type="button" class="btn btn-primary">Schedule Purchase</button>
+    </div>
+  </div>
+</form>

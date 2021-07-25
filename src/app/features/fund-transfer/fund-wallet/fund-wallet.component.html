@@ -1,0 +1,36 @@
+
+<form id="fundWalletForm">
+  <div class="row mb-3">
+    <div class="col-sm-12 col-md-8 form-floating">
+      <select name="account" id="account" class="form-select">
+        <option>Account A</option>
+      </select>
+      <label for="account">Select Account</label>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-sm-12 form-floating">
+      <select name="card" id="card" class="form-select">
+        <option>Card A</option>
+      </select>
+      <label for="card">Select Card</label>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-sm-12 col-md-6 form-floating">
+      <input type="text" class="form-control" id="amount" name="amount" placeholder="Amount">
+      <label for="amount">Amount</label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="d-grid gap-3 d-md-flex justify-content-md-end">
+        <button type="button" class="btn btn-primary" routerLink="/dashboard">Cancel</button>
+        <button type="button" class="btn btn-primary">Fund Wallet</button>
+        <button type="button" class="btn btn-primary">Add Card</button>
+      </div>
+    </div>
+  </div>
+</form>
+

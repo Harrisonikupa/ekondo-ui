@@ -1,0 +1,24 @@
+.savings-container {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+}
+
+p {
+  margin: 0;
+}
+
+.title, .percent {
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.text {
+  font-weight: 600;
+  font-size: .725rem;
+}
+
+.value {
+  font-weight: 600;
+  font-size: 1rem;
+}

@@ -1,0 +1,68 @@
+<div class="row">
+  <div class="col-sm-8">
+    <div class="nav-container">
+      <ul class="nav nav-tabs mb-4">
+        <li class="nav-item col p-0" (click)="gotoTab(1)">
+          <a class="nav-link" [class.active]="currentTab == 1" data-toggle="tab" id="navStep1">
+            <i-feather name="shuffle"></i-feather>
+            &nbsp;&nbsp;
+            New Transfer
+          </a>
+        </li>
+        <!-- <li class="nav-item col p-0" (click)="gotoTab(2)">
+          <a class="nav-link" [class.active]="currentTab == 2" data-toggle="tab" id="navStep2">
+            <i-feather name="credit-card"></i-feather>
+            &nbsp;&nbsp;
+            Fund Wallet
+          </a>
+        </li> -->
+      </ul>
+
+     <div class="row">
+       <div class="col-sm-12">
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade" id="step1" [class.active]="currentTab == 1" [class.show]="currentTab == 1" role="tab-panel">
+            <div class="row">
+              <div class="col-sm-12 d-md-flex justify-content-md-center">
+                <app-new-transfer></app-new-transfer>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="step2" [class.active]="currentTab == 2" [class.show]="currentTab == 2" role="tab-panel">
+            <div class="row">
+              <div class="col-sm-12 d-md-flex justify-content-md-center">
+                <app-fund-wallet></app-fund-wallet>
+              </div>
+            </div>
+         </div>
+        </div>
+       </div>
+     </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-4 pt-md-0 pt-3">
+    <div class="recent-container">
+      <div class="recent-header">
+        <div class="recent-title">
+        <span>Recent Transactions</span>
+        </div>
+      </div>
+      <div class="recent-body">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+
+      </div>
+    </div>
+  </div>
+</div>

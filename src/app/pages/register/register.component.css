@@ -1,0 +1,120 @@
+.register-image {
+  object-fit: cover;
+  background: linear-gradient(0deg, rgba(8, 13, 21, 0.7), rgba(8, 13, 21, 0.7)), url('../../../assets/img/onboarding/2.jpg');
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #080d15;
+}
+
+/* #existing-customer-container {
+  border-left: 1px solid greenyellow;
+} */
+
+/* .nav-item > .nav-link svg {
+  height: 28px !important;
+  width: 28px !important;
+} */
+.step-label {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.step-sub-label {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.horizontal-line {
+  height: 2px;
+}
+
+.step1-label {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.step-button {
+  width: 100%;
+}
+
+.space-between-buttons {
+  padding: 0.5rem 0;
+}
+
+.heading {
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.body {
+  font-weight: 500;
+  /* font-size: .75rem; */
+}
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .step-button {
+    width: 100%;
+  }
+  .space-between-buttons {
+    padding: 0.5rem 0;
+  }
+  /* .otp-text-width {
+    width: 50%;
+  } */
+ }
+
+ /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .step-button {
+    width: 100%;
+  }
+  .space-between-buttons {
+    padding: 0;
+  }
+  /* .otp-text-width {
+    width: 50%;
+  } */
+ }
+
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .step-button {
+    width: 8rem;
+  }
+  .space-between-buttons {
+    padding: 0;
+  }
+  /* .otp-text-width {
+    width: 32%;
+  } */
+ }
+
+ /* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .step-button {
+    width: 8rem;
+  }
+  .space-between-buttons {
+    padding: 0;
+  }
+  /* .otp-text-width {
+    width: 32%;
+  } */
+ }
+
+ /* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .step-button {
+    width: 8rem;
+  }
+  .space-between-buttons {
+    padding: 0;
+  }
+  /* .otp-text-width {
+    width: 32%;
+  } */
+ }

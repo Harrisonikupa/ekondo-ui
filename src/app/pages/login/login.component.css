@@ -1,0 +1,63 @@
+.login-logo {
+  height: 8rem;
+  width: auto;
+}
+
+.login-logo-2 {
+  height: auto;
+  width: 15rem;
+}
+
+.login-title {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-top: -.5rem;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: #080d15;
+  opacity: .7;
+}
+
+.carousel-indicators {
+  display: none;
+}
+
+@media only screen and (min-width : 1200px) {
+  .carousel-caption
+  {
+    top: 50%;
+    z-index: 200000000000000000000000000000;
+  }
+}
+
+.carousel-caption > h1 {
+  font-weight: bold;
+  font-size: 4rem !important;
+  color: #E5E5E5 !important;
+}
+
+.carousel-caption > p {
+  font-weight: 300;
+  font-size: 1.5rem !important;
+  color: #E5E5E5 !important;
+}
+
+.carousel-item img {
+  height: 100vh !important;
+  object-fit: cover;
+}
+
+.auth-background {
+  background-color: #FFFFFF;
+  height: 100vh;
+}
+
+.justify-self-end {
+  justify-self: end !important;
+}
+

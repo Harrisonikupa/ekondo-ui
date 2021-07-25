@@ -1,0 +1,83 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="recent-container">
+        <div class="recent-header">
+          <div class="recent-title">
+          <span>Transaction History</span>
+          </div>
+        </div>
+        <div class="recent-body">
+          <div class="row mb-3">
+            <div class="col-sm-12 col-md-6 form-floating">
+              <select name="account" id="account" class="form-select">
+                <option value="a">Account A</option>
+              </select>
+              <label for="account">Select Account</label>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-sm-12 col-md-6 form-floating">
+              <input type="text" class="form-control" name="transferFrom" id="transferFrom" placeholder="Start Date">
+              <label for="transferFrom">Start Date</label>
+            </div>
+
+            <div class="col-sm-12 col-md-6 form-floating">
+              <input type="text" class="form-control" name="transferTo" id="transferTo" placeholder="End Date">
+              <label for="transferTo">End Date</label>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-sm-12 col-md-6 form-floating">
+              <select name="transferPeriod" id="transferPeriod" class="form-select">
+                <option value="a">Period A</option>
+              </select>
+              <label for="transferPeriod">Select Transfer Period</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="d-grid gap-3 d-md-flex justify-content-md-end">
+                <button type="button" class="btn btn-primary">Print Statement</button>
+                <button type="button" class="btn btn-primary">Email Statement</button>
+                <button type="button" class="btn btn-primary">Download Statement</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-5">
+            <div class="col-sm-12">
+              <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th>Transaction Date</th>
+                      <th>Beneficiary</th>
+                      <th>Credit (N)</th>
+                      <th>Debit (N)</th>
+                      <th>Balance</th>
+                      <th>Remarks</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of data">
+                      <td>25th May, 2021</td>
+                      <td>Jamie Ford</td>
+                      <td>-</td>
+                      <td>N10,000</td>
+                      <td>N125,000</td>
+                      <td>Thank you for your service</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,171 @@
+<form id="workAndEducation">
+  <div class="row mb-3">
+    <div class="col-sm-12 form-floating">
+      <select name="level-of-work" id="level-of-work" class="form-select" [(ngModel)]="levelOfWork" (change)="clearObjects()">
+        <option value="entrepreneur">Entrepreneur</option>
+        <option value="microTrader">Micro Trader</option>
+        <option value="salaryEarner">Salary Earner</option>
+        <option value="student">Student</option>
+      </select>
+      <label for="levelOfWork">Job Type</label>
+    </div>
+  </div>
+
+  <div *ngIf="levelOfWork == 'entrepreneur'">
+    <div class="row mb-3">
+      <div class="col-sm-12 col-md-6 form-floating">
+        <input type="text" class="form-control" placeholder="Business Name" id="businessName" name="businessName">
+        <label for="businessName">Business Name</label>
+      </div>
+      <div class="col-sm-12 col-md-6 form-floating mt-3 mt-md-0">
+        <input type="text" class="form-control" placeholder="Monthly Earnings" id="monthlyEarnings" name="monthlyEarnings">
+        <label for="monthlyEarnings">Monthly Earnings</label>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-sm-12 col-md-6 form-floating">
+        <select name="businessType" id="businessType" class="form-select">
+          <option value="service">Service</option>
+          <option value="product">Product</option>
+        </select>
+        <label for="businessType">Business Type</label>
+      </div>
+      <div class="col-sm-12 col-md-6 form-floating mt-3 mt-md-0">
+        <input type="text" class="form-control" placeholder="Business Description" id="businessDescription" name="businessDescription">
+        <label for="businessDescription">Business Description</label>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-sm-12 col-md-6 form-floating">
+        <select name="space" id="space" class="form-select">
+          <option value="online">Online</option>
+          <option value="physical">Physical</option>
+        </select>
+        <label for="space">Business Space</label>
+      </div>
+      <div class="col-sm-12 col-md-6 form-floating mt-3 mt-md-0">
+        <input type="text" class="form-control" placeholder="Business Address" id="businessAddress" name="businessAddress">
+        <label for="businessAddress">Business Address</label>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-sm-12 col-md-6 form-floating mt-3 mt-md-0">
+        <select name="qualification" id="qualification" class="form-select">
+          <option value="1">BSC</option>
+        </select>
+        <label for="qualification">Qualification</label>
+      </div>
+    </div>
+  </div>
+
+
+  <div *ngIf="levelOfWork == 'microTrader'">
+    <div class="row mb-3">
+      <div class="col-sm-12 col-md-6 form-floating">
+        <select name="businessStage" id="businessStage" class="form-select" class="form-select">
+          <option value="new">New</option>
+          <option value="existing">Existing</option>
+        </select>
+        <label for="businessStage">Business Stage</label>
+      </div>
+      <div class="col-sm-12 col-md-6 mt-3 mt-md-0 form-floating">
+        <input type="text" class="form-control" placeholder="Occupation" id="occupation" name="occupation">
+        <label for="occupation">Occupation</label>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-sm-12 col-md-6 form-floating">
+        <input type="text" class="form-control" placeholder="Business Address" id="businessAddress" name="businessAddress">
+        <label for="businessAddress">Business Address</label>
+      </div>
+      <div class="col-sm-12 col-md-6 form-floating mt-3 mt-md-0">
+        <input type="text" class="form-control" placeholder="Monthly Earning" id="monthlyEarning" name="monthlyEarning">
+        <label for="montlyEarning">Monthly Earning</label>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-sm-12 col-md-6 form-floating">
+        <input type="text" class="form-control" placeholder="Monthly Expenditure" id="monthlyExpenditure" name="monthlyExpenditure">
+        <label for="monthlyExpenditure">Monthly Expenditure</label>
+      </div>
+      <div class="col-sm-12 col-md-6 mt-3 mt-md-0 form-floating">
+        <select name="qualification" id="qualification" class="form-select">
+          <option value="1">BSC</option>
+        </select>
+        <label for="qualification">Qualification</label>
+      </div>
+    </div>
+  </div>
+
+
+  <div *ngIf="levelOfWork == 'salaryEarner'">
+    <div class="row mb-3">
+      <div class="col-sm-12 col-md-6 form-floating">
+        <input type="text" class="form-control" placeholder="Monthly Income" id="monthlyIncome" name="monthlyIncome">
+        <label for="monthlyIncome">Monthly Income</label>
+      </div>
+      <div class="col-sm-12 col-md-6 form-floating mt-3 mt-md-0">
+        <input type="text" class="form-control" placeholder="Job Role" id="jobRole" name="jobRole">
+        <label for="jobRole">Job Role</label>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-sm-12 col-md-6 form-floating">
+        <select name="conpanyIndustry" id="conpanyIndustry" class="form-select">
+          <option value="1">Information</option>
+        </select>
+        <label for="companyIndustry">Company Industry</label>
+      </div>
+      <div class="col-sm-12 col-md-6 form-floating mt-3 mt-md-0">
+        <input type="text" class="form-control" placeholder="Companys' Name" id="companyName" name="companyName">
+        <label for="companyName">Company Name</label>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-sm-12 col-md-6 form-floating">
+        <input type="text" class="form-control" placeholder="Companys' Address" id="companyAddress" name="companyAddress">
+        <label for="companyAddress">Companys' Address</label>
+      </div>
+      <div class="col-sm-12 col-md-6 form-floating mt-3 mt-md-0">
+        <select name="qualification" id="qualification" class="form-select">
+          <option value="1">BSC</option>
+        </select>
+        <label for="qualification">Qualification</label>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="levelOfWork == 'student'">
+    <div class="row mb-3">
+      <div class="col-sm-12 col-md-6 form-floating">
+        <select name="level" id="level" class="form-select">
+          <option value="primary">Primary</option>
+          <option value="secondary">Secondary</option>
+          <option value="tertiary">Tertiary</option>
+        </select>
+        <label for="label">Label</label>
+      </div>
+      <div class="col-sm-12 col-md-6 form-floating mt-3 mt-md-0">
+        <input type="text" class="form-control" placeholder="School Name" id="nameOfSchool" name="nameOfSchool">
+        <label for="nameOfSchool">School Name</label>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-sm-12 col-md-6 form-floating">
+        <input type="text" class="form-control" placeholder="Your Class" id="currentEducation" name="currentEducation">
+        <label for="currentEducation">Your Class</label>
+      </div>
+      <div class="col-sm-12 col-md-6 mt-3 mt-md-0 form-floating">
+        <input type="text" class="form-control" placeholder="Schools' Address" id="schoolAddress" name="schoolAddress">
+        <label for="schoolAddress">School Address</label>
+      </div>
+    </div>
+  </div>
+</form>

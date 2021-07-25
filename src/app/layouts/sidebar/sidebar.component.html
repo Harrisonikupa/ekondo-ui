@@ -1,0 +1,213 @@
+<!-- <nav id="sidebarMenu" class="d-block bg-white sidebar p-0">
+  <div class="sidebar-sticky sidebar-menu">
+    <div class="row mt-2 mb-2 ml-5 mr-5">
+      <div class="col-12 p-0">
+        <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3 mb-4" routerLink="/dashboard">
+          <img src="../assets/img/sidebar-logo.png" class="sidebar-logo center-block d-grid mx-auto" alt="Accion MFB">
+        </a>
+      </div>
+    </div>
+    <ul class="nav flex-column" style="background-color: #858585;">
+      <li class="nav-item">
+        <a class="nav-link nav-link-custom-padding" routerLink="/dashboard" routerLinkActive="active">
+          <table>
+            <tr>
+              <td><span class="ml-3">Dashboard</span></td>
+            </tr>
+          </table>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-link-custom-padding" routerLink="/profile" routerLinkActive="active">
+          <table>
+            <tr>
+              <td><span class="ml-3">My Profile</span></td>
+            </tr>
+          </table>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-link-custom-padding" routerLink="/pay-bills" routerLinkActive="active">
+          <table>
+            <tr>
+              <td><span class="ml-3">Pay Bills</span></td>
+            </tr>
+          </table>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-link-custom-padding" routerLink="/transfer-money" routerLinkActive="active">
+          <table>
+            <tr>
+              <td><span class="ml-3">Transfer Money</span></td>
+            </tr>
+          </table>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-link-custom-padding" routerLink="/cards" routerLinkActive="active">
+          <table>
+            <tr>
+              <td><span class="ml-3">My Cards</span></td>
+            </tr>
+          </table>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-link-custom-padding" routerLink="/loans" routerLinkActive="active">
+          <table>
+            <tr>
+              <td><span class="ml-3">Take a Loan</span></td>
+            </tr>
+          </table>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-link-custom-padding" routerLink="/savings" routerLinkActive="active">
+          <table>
+            <tr>
+              <td><span class="ml-3">Savings</span></td>
+            </tr>
+          </table>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-link-custom-padding" routerLink="/investments" routerLinkActive="active">
+          <table>
+            <tr>
+              <td><span class="ml-3">Investment</span></td>
+            </tr>
+          </table>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-link-custom-padding" routerLink="/beneficiaries" routerLinkActive="active">
+          <table>
+            <tr>
+              <td><span class="ml-3">My Beneficiaries</span></td>
+            </tr>
+          </table>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-link-custom-padding" routerLink="/rewards" routerLinkActive="active">
+          <table>
+            <tr>
+              <td><span class="ml-3">My Rewards</span></td>
+            </tr>
+          </table>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-link-custom-padding" routerLink="/security-settings" routerLinkActive="active">
+          <table>
+            <tr>
+              <td><span class="ml-3">Security Settings</span></td>
+            </tr>
+          </table>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-link-custom-padding" routerLink="/login" routerLinkActive="active">
+          <table>
+            <tr>
+              <td><span class="ml-3">Logout</span></td>
+            </tr>
+          </table>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+
+<nav id="sidebar">
+  <div class="custom-menu">
+    <button type="button" id="sidebarCollapse" class="btn" (click)="toggleSidebar()">
+      <i class="fa fa-bars"></i>
+      <span class="sr-only">Toggle Menu</span>
+    </button>
+  </div>
+  <div class="p-4">
+    <div class="row mb-5">
+      <div class="col-sm-12">
+        <img src="../assets/img/logo-light.png" class="sidebar-logo center-block d-grid mx-auto" alt="Accion MFB">
+      </div>
+    </div>
+
+    <ul class="list-unstyled components mb-5">
+      <li routerLinkActive="active">
+        <a routerLink="/dashboard">
+          <i-feather name="grid"></i-feather>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li routerLinkActive="active">
+          <a routerLink="/profile">
+            <i-feather name="user"></i-feather>
+             <span>My Profile</span>
+          </a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/pay-bills">
+          <i-feather name="clipboard"></i-feather>
+          <span>Pay Bills</span></a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/transfer-money">
+          <i-feather name="shuffle"></i-feather>
+          <span>Transfer Money</span></a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/transaction-history">
+          <i-feather name="list"></i-feather>
+          <span>Transaction History</span></a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/cards">
+          <i-feather name="credit-card"></i-feather>
+          <span>My Cards</span></a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/loans">
+          <i-feather name="sliders"></i-feather>
+          <span>Take a Loan</span></a>
+    </li>
+    <li routerLinkActive="active">
+      <a routerLink="/savings">
+        <i-feather name="pocket"></i-feather>
+        <span>Savings</span>
+      </a>
+    </li>
+    <li routerLinkActive="active">
+      <a routerLink="/investments">
+        <i-feather name="activity"></i-feather>
+        <span>Investments</span>
+      </a>
+    </li>
+    <li routerLinkActive="active">
+      <a routerLink="/beneficiaries">
+        <i-feather name="user-plus"></i-feather>
+        <span>Beneficiaries</span>
+      </a>
+    </li>
+    <li routerLinkActive="active">
+      <a routerLink="/rewards">
+        <i-feather name="dollar-sign"></i-feather>
+        <span>My Rewards</span>
+      </a>
+  </li>
+  <li routerLinkActive="active">
+    <a routerLink="/security-settings">
+      <i-feather name="settings"></i-feather>
+      <span>Security Settings</span>
+    </a>
+  </li>
+  <li routerLinkActive="active">
+    <a routerLink="/login">
+      <i-feather name="power"></i-feather>
+        <span>Logout</span>
+    </a>
+  </li>
+    </ul>
+  </div>
+</nav>

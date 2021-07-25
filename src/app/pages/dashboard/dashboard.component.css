@@ -1,0 +1,173 @@
+.account-card {
+  width: 100%;
+  height: 10.5rem;
+  padding: 1.0rem;
+  margin-bottom: 1rem;
+  /* border: 3px solid #0A9D5B; */
+}
+
+.progress-item > p {
+  font-weight: bold;
+  margin: 5px;
+}
+
+.progress-item {
+  margin-bottom: 1.25rem;
+}
+
+.card-logos {
+  width: auto;
+  height: 1.5rem;
+}
+
+.account-card.light {
+  background-color: white;
+}
+
+.account-card.light p {
+  color: #0A9D5B;
+}
+
+.account-card.dark p {
+  background-color: white;
+}
+.account-card .dark {
+  background-color: #000000cb;
+}
+
+p {
+  margin: 0;
+}
+
+.account-title {
+  font-weight: 600;
+  font-size: .825rem;
+}
+.account-text {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.account-card-body {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.section-header {
+  font-weight: bold;
+  font-size: 1.15rem;
+  color: #0A9D5B;
+  margin-bottom: 1rem;
+}
+
+
+/* X-Small devices (portrait phones, less than 576px) No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .account-card {
+    height: auto;
+  }
+
+  .account-title {
+    font-weight: 600;
+    font-size: .825rem;
+  }
+
+  .account-text {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+
+  .card-logos {
+    width: auto;
+    height: 1.5rem;
+  }
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .account-card {
+    height: 10.5rem;
+  }
+
+  .account-title {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .account-text {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .card-logos {
+    width: auto;
+    height: 1.5rem;
+  }
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .account-card {
+    height: 15rem;
+  }
+
+  .account-title {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .account-text {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  .card-logos {
+    width: auto;
+    height: 3rem;
+  }
+ }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .account-card {
+    height: 15rem;
+  }
+
+  .account-title {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .account-text {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  .card-logos {
+    width: auto;
+    height: 3rem;
+  }
+ }
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .account-card {
+    height: 15rem;
+  }
+
+  .account-title {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .account-text {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  .card-logos {
+    width: auto;
+    height: 3rem;
+  }
+ }
+
+
+/* .account-card {
+
+} */

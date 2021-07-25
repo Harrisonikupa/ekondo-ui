@@ -1,0 +1,164 @@
+.card-container {
+  height: 12rem;
+  width: 100%;
+  padding: 2rem;
+  display: grid;
+}
+
+p {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.card-list > p {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.card-list .card-item {
+  height: 5rem;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.card-item > img {
+  height: 2rem;
+  width: auto;
+  display: none;
+}
+
+.card-item p {
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 0;
+}
+.card-item i-feather {
+  width: 26px !important;
+  height: 26px !important;
+  stroke: darkred;
+  cursor: pointer;
+}
+
+.card-logo {
+  height: 1.5rem;
+  width: auto;
+}
+
+
+/*  X-Small devices (portrait phones, less than 576px)
+ No media query for `xs` since this is the default in Bootstrap */
+
+/*  Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .card-container {
+    height: 12rem;
+    width: 100%;
+
+    padding: 2rem;
+    display: grid;
+  }
+
+  .card-logo {
+    height: 1.5rem;
+    width: auto;
+  }
+
+  .card-item > img {
+    height: 2rem;
+    width: auto;
+    display: none;
+  }
+}
+
+/*  Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .card-container {
+    height: 12rem;
+    width: 100%;
+
+    padding: 2rem;
+    display: grid;
+  }
+
+  .card-logo {
+    height: 1.5rem;
+    width: auto;
+  }
+
+  .card-item > img {
+    height: 2rem;
+    width: auto;
+    display: none;
+  }
+}
+
+/*  Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .card-container {
+    height: 15rem;
+    width: 100%;
+
+    padding: 2rem;
+    display: grid;
+  }
+
+  .card-logo {
+    height: 3rem;
+    width: auto;
+  }
+
+  .card-item > img {
+    height: 2rem;
+    width: auto;
+    display: inline-flex;
+  }
+}
+
+/*  X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .card-container {
+    height: 15rem;
+    width: 100%;
+
+    padding: 2rem;
+    display: grid;
+  }
+
+  .card-logo {
+    height: 3rem;
+    width: auto;
+  }
+
+  .card-item > img {
+    height: 2rem;
+    width: auto;
+    display: inline-flex;
+  }
+}
+
+/*  XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .card-container {
+    height: 15rem;
+    width: 100%;
+
+    padding: 2rem;
+    display: grid;
+  }
+
+  .card-logo {
+    height: 3rem;
+    width: auto;
+  }
+
+  .card-item > img {
+    height: 2rem;
+    width: auto;
+    display: inline-flex;
+  }
+}

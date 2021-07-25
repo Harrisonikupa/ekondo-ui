@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="recent-container">
+    <div class="recent-header">
+      <div class="recent-title">
+      <span>Cards</span>
+      </div>
+    </div>
+    <div class="recent-body">
+      <div class="row">
+        <div class="col-sm-12 d-flex justify-content-end">
+          <button class="btn btn-primary">Add Card</button>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-6">
+          <div class="card-container mb-5 card-shadow">
+            <div class="row align-items-start">
+              <div class="col-sm-12 d-flex justify-content-between align-items-center">
+                <p>5590 0029 9930 5688</p>
+                <img src="../../../assets/img/card-logos/verve.png" alt="" class="card-logo">
+              </div>
+            </div>
+
+            <div class="row align-items-end">
+              <div class="col-sm-12 d-flex justify-content-between align-items-center">
+                <p>Jamie Simpson</p>
+                <p>03/25</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-list">
+            <p class="mb-2 ">My Cards</p>
+            <div class="card-item card-shadow" *ngFor="let item of data">
+              <p>**** **** **** 5688</p>
+              <p>03/25</p>
+              <img src="../../../assets/img/card-logos/verve.png" alt="">
+              <i-feather name="trash"></i-feather>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

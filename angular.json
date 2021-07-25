@@ -24,9 +24,23 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/libs/smoke-js/css/smoke.min.css",
+              "node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css",
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/datatables.net-dt/css/jquery.dataTables.css",
+              "node_modules/select2/dist/css/select2.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
+              "src/assets/libs/smoke-js/js/smoke.js",
+              "node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js",
+              "node_modules/datatables.net/js/jquery.dataTables.js",
+              "node_modules/select2/dist/js/select2.min.js"
+            ]
           },
           "configurations": {
             "production": {

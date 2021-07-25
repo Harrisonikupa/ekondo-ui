@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-4 form-floating pb-3 pb-md-0">
+    <input [type]="isFieldOneTextVisible1 ? 'text' : 'password'" class="form-control" name="oldPin" id="oldPin" placeholder="Old Pin" [disabled]="isChangingPin" required>
+    <label for="oldPin">Input Old Pin</label>
+  </div>
+  <div class="col-md-4 form-floating pb-3 pb-md-0">
+    <input [type]="isFieldTwoTextVisible1 ? 'text' : 'password'" class="form-control" name="newPin" data-smk-strongPass="standard" placeholder="New Pin" [disabled]="isChangingPin" id="newPin" required>
+    <label for="newPin">Input New Pin</label>
+  </div>
+  <div class="col-md-4 form-floating pb-3 pb-md-0">
+    <input [type]="isFieldThreeTextVisible1 ? 'text' : 'password'" class="form-control" name="confirmPin" id="confirmPin" placeholder="Confirm New Pin" [disabled]="isChangingPin" required>
+    <label for="confirmPin">Confirm New Pin</label>
+  </div>
+</div>

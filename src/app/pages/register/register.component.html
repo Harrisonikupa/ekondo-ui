@@ -1,0 +1,350 @@
+<div class="container-fluid p-0 overflow-hidden">
+  <div class="row">
+    <div class="col-md-4 d-none d-sm-block p-0">
+      <div class="register-image"></div>
+    </div>
+    <div class="col-sm-8 px-md-3 px-4">
+      <div class="row mb-5">
+        <div class="col-sm-12 d-flex justify-content-end">
+          <img src="../../../assets/img/logo.png" class="m-4" style="height: 4.5rem; width: auto;" alt="">
+        </div>
+      </div>
+
+      <!-- <div class="row">
+        <div class="col-sm-12">
+          <p class="step-label primary-text">Step {{currentStep}} of 4</p>
+          <hr class="horizontal-line">
+        </div>
+      </div> -->
+
+      <div class="row">
+        <div class="col-sm-12">
+          <ul class="nav nav-tabs">
+            <li class="nav-item col p-0">
+              <a class="nav-link" [class.active]="currentStep == 1" data-toggle="tab" id="navStep1">
+                <app-icon-one></app-icon-one>
+                Customer
+              </a>
+            </li>
+            <li class="nav-item col p-0">
+              <a class="nav-link" [class.active]="currentStep == 2" data-toggle="tab" id="navStep2">
+                <app-icon-two></app-icon-two>
+                Personal Information
+              </a>
+            </li>
+            <li class="nav-item col p-0">
+              <a class="nav-link" [class.active]="currentStep == 3" data-toggle="tab" id="navStep3">
+                <app-icon-three></app-icon-three>
+                Confirmation
+              </a>
+            </li>
+            <li class="nav-item col p-0">
+              <a class="nav-link" [class.active]="currentStep == 4" data-toggle="tab" id="navStep4">
+                <app-icon-four></app-icon-four>
+                Account Settings
+              </a>
+            </li>
+         </ul>
+
+         <div class="row">
+           <div class="col-sm-12">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade" id="step1" [class.active]="currentStep == 1" [class.show]="currentStep == 1" role="tab-panel">
+                <div class="row pb-4 pt-5">
+                  <div class="col-sm-12 col-md-5">
+                   <p class="step1-label primary-text">Welcome to Ekondo Microfinance Bank's Internet Banking Portal.</p>
+                  </div>
+                </div>
+
+               <div class="row">
+                 <div class="col-sm-12 col-md-6">
+                    <form id="newCustomerForm">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <p class="heading primary-text">New Customer</p>
+                          <p class="body">To get started, input your BVN below to continue. If you don't have a BVN, click on SKIP</p>
+                        </div>
+                      </div>
+                      <div class="row pb-5">
+                        <div class="col-sm-12 col-md-8">
+                          <div class="row pb-3">
+                            <div class="col-sm-12 form-floating">
+                              <input type="text" class="form-control" id="bvn" name="bvn" placeholder="BVN" required>
+                              <label for="bvn">Input BVN</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                 </div>
+                 <div class="col-sm-12 col-md-6" id="existing-customer-container">
+                    <form id="existingCustomerForm">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <p class="heading primary-text">Existing Customer</p>
+                          <p class="body">Kindly input the phone number attached to your account</p>
+                        </div>
+                      </div>
+                      <div class="row pb-5">
+                        <div class="col-sm-12 col-md-8">
+                          <div class="row pb-3">
+                            <div class="col-sm-12 form-floating">
+                              <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" [(ngModel)]="verificationObject.phoneNumber" required>
+                              <label for="phoneNumber">Input your phone number</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+               </div>
+
+              </div>
+
+              <div class="tab-pane fade" id="step2" [class.active]="currentStep == 2" [class.show]="currentStep == 2" role="tab-panel">
+                <form id="personalDataForm" (ngSubmit)="collectPersonalData()" novalidate>
+                  <div class="row pt-4">
+                    <div class="col-sm-12 col-md-6" style="border-right: 1px solid lightgrey;">
+                      <p class="primary-text step-sub-label">Personal Info</p>
+                      <div class="row pt-3">
+                        <div class="col-sm-12 col-md-6 form-floating">
+                          <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="representativeDetailsObject.firstName" placeholder="First Name*">
+                          <label for="firstName">First Name*</label>
+                        </div>
+                        <div class="col-sm-12 col-md-6 pt-md-0 pt-3 form-floating">
+                          <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name*" [(ngModel)]="representativeDetailsObject.lastName">
+                          <label for="lastName">Last Name*</label>
+                        </div>
+                      </div>
+
+                      <div class="row pt-3">
+                        <div class="col-sm-12 col-md-6 form-floating">
+                          <input type="text" class="form-control" id="middleName" name="middleName" placeholder="Middle Name" [(ngModel)]="representativeDetailsObject.middleName" #middleName="ngModel" >
+                          <label for="middleName">Middle Name</label>
+                        </div>
+                      </div>
+
+                      <div class="row pt-3">
+                        <div class="col-sm-12 col-md-6 form-floating">
+                          <input type="text" class="form-control" id="dateOfBirth" name="dateOfBirth" placeholder="DD/MM/YYYY" [(ngModel)]="representativeDetailsObject.dob">
+                          <label for="dateOfBirth">Date of Birth*</label>
+                        </div>
+                        <div class="col-sm-12 col-md-6 pt-md-0 pt-3 form-floating">
+                          <select name="stateOfOrigin" id="stateOfOrigin" class="form-select">
+                            <option value="">an option</option>
+                          </select>
+                          <label for="stateOfOrigin">State of Origin*</label>
+                        </div>
+                      </div>
+
+                      <div class="row pt-3">
+                        <div class="col-sm-12 col-md-6 form-floating">
+                          <select name="localGovernmentArea" id="localGovernmentArea" class="form-select">
+                            <option value="">an option</option>
+                          </select>
+                          <label for="localGovernmentArea">Local Government Aea*</label>
+                        </div>
+                        <div class="col-sm-12 col-md-6 form-floating pt-md-0 pt-3">
+                          <select name="nationality" id="nationality" class="form-select">
+                            <option value="">an option</option>
+                          </select>
+                          <label for="nationality">Nationality*</label>
+                        </div>
+                      </div>
+
+                      <div class="row pt-3">
+                        <div class="col-sm-12 col-md-6 form-floating">
+                          <select name="gender" id="gender" class="form-select">
+                            <option value="">an option</option>
+                          </select>
+                          <label for="gender">Gender*</label>
+                        </div>
+                        <div class="col-sm-12 col-md-6 form-floating pt-md-0 pt-3">
+                          <select name="maritalStatus" id="maritalStatus" class="form-select">
+                            <option value="">an option</option>
+                          </select>
+                          <label for="maritalStatus">Marital Status*</label>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                      <p class="primary-text step-sub-label pt-md-0 pt-4">Contact Details</p>
+                      <div class="row pt-3">
+                        <div class="col-6 col-md-3 form-floating">
+                          <input type="text" class="form-control" id="houseNumber" name="houseNumber" placeholder="322" [(ngModel)]="representativeDetailsObject.contactInfo.houseNumber">
+                          <label for="houseNumber">House Number*</label>
+                        </div>
+                      </div>
+
+                      <div class="row pt-3">
+                        <div class="col-sm-12 form-floating">
+                          <input type="text" class="form-control" id="address" name="address" placeholder="Street" [(ngModel)]="representativeDetailsObject.contactInfo.address" #address="ngModel">
+                          <label for="address">Address*</label>
+                        </div>
+                      </div>
+
+                      <div class="row pt-3">
+                        <div class="col-sm-12 col-md-6 form-floating">
+                          <select name="contactStateOfOrigin" id="contactStateOfOrigin" class="form-select">
+                            <option value="">an option</option>
+                          </select>
+                          <label for="contactStateOfOrigin">State of Origin*</label>
+                        </div>
+                        <div class="col-sm-12 col-md-6 form-floating pt-md-0 pt-3">
+                          <select name="contactLocalGovernmentArea" id="contactLocalGovernmentArea" class="form-select">
+                            <option value="">an option</option>
+                          </select>
+                          <label for="contactLocalGovernmentArea">Local Government Area*</label>
+                        </div>
+                      </div>
+
+                      <div class="row pt-3">
+                        <div class="col-sm-12 col-md-6 form-floating">
+                          <input type="text" class="form-control" id="bvnNumber" name="bvnNumber" placeholder="BVN*" [(ngModel)]="representativeDetailsObject.contactInfo.bvn">
+                          <label for="bvnNumber">Bvn Number*</label>
+                        </div>
+                        <div class="col-sm-12 col-md-6 form-floating pt-md-0 pt-3">
+                          <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" [(ngModel)]="representativeDetailsObject.contactInfo.mobileNumber2">
+                          <label for="phoneNumber">Phone Number*</label>
+                        </div>
+                      </div>
+
+                      <div class="row pt-3">
+                        <div class="col-sm-12 col-md-6 form-floating">
+                          <input type="text" class="form-control" id="emailAddress" name="emailAddress" placeholder="Email Address" [(ngModel)]="representativeDetailsObject.email" #email="ngModel">
+                          <label for="emailAddress">Email Address*</label>
+                        </div>
+                        <div class="col-sm-12 col-md-6 form-floating">
+                          <input type="text" class="form-control" id="referralCode" name="referralCode" placeholder="Referral Code (Optional)">
+                          <label for="referralCode">Referral Code (Optional)</label>
+                         </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </form>
+             </div>
+             <div class="tab-pane fade" id="step3" [class.active]="currentStep == 3" [class.show]="currentStep == 3" role="tab-panel">
+               <div class="row pt-5">
+                 <div class="col-sm-12">
+                   <p class="text-center" style="font-weight: 600; margin-bottom: 0 !important;">Please input the One Time Password(OTP) sent to your phone number</p>
+                   <p style="font-weight: 600;" class="text-center">{{otpMessage}}</p>
+                 </div>
+               </div>
+
+               <form #otpValidationForm="ngForm" (ngSubmit)="validateOtp()" novalidate>
+                <div class="row pt-5">
+                  <div class="col-sm-12 col-md-4 form-floating mx-auto">
+                    <input type="text" class="form-control otp-text-width" placeholder="OTP*" id="otp" name="otp" [(ngModel)]="oneTimePassword" required>
+                    <label for="otp">OTP*</label>
+                  </div>
+                </div>
+               </form>
+
+               <div class="row pt-3">
+                 <div class="col-sm-12 d-flex justify-content-center">
+                   <a class="text-center" (click)="sendOtp()">Didn't get an OTP? Click here</a>
+                 </div>
+               </div>
+             </div>
+             <div class="tab-pane fade" id="step4" [class.active]="currentStep == 4" [class.show]="currentStep == 4" role="tab-panel">
+              <form #accountSettingsForm="ngForm" (ngSubmit)="collectAccountSettingsData()" novalidate>
+
+              </form>
+
+              <div class="row pt-4">
+                <div class="col-sm-12 col-md-4">
+                  <p class="primary-text step-sub-label">Change Password</p>
+                  <div class="row mb-3">
+                    <div class="col-sm-12 form-floating">
+                      <input type="password" class="form-control" name="password" id="password" placeholder="Create Password" [(ngModel)]="accountSettingsObject.password">
+                      <label for="password">Create Password</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12 form-floating">
+                      <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" [(ngModel)]="accountSettingsObject.confirmPassword">
+                      <label for="confirmPassword">Confirm Password</label>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="col-sm-12 col-md-4">
+                  <p class="primary-text step-sub-label">Change Pin</p>
+                  <div class="row mb-3">
+                    <div class="col-sm-12 form-floating">
+                      <input type="password" name="pin" id="pin" class="form-control" placeholder="Create Pin" [(ngModel)]="accountSettingsObject.pin">
+                      <label for="pin">Create Pin</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12 form-floating">
+                      <input type="password" name="confirmPin" id="confirmPin" class="form-control" placeholder="Confirm Pin" [(ngModel)]="accountSettingsObject.confirmPin">
+                      <label for="confirmPin">Confirm Pin</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                  <p class="primary-text step-sub-label pt-md-0 pt-3">Answer Security Question</p>
+                  <div class="row mb-3">
+                    <div class="col-sm-12 form-floating">
+                      <select class="form-select">
+                        <option value="1">Question One</option>
+                        <option value="2">Question Two</option>
+                        <option value="3">Question Three</option>
+
+                      </select>
+                      <label for="securityQuestion">Security Questions</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12 form-floating">
+                      <input type="text" class="form-control" placeholder="Provide Security Answer" [(ngModel)]="accountSettingsObject.securityAnswer">
+                      <label for="securityAnswer">Provide Security Answer</label>
+                    </div>
+                  </div>
+                </div>
+               </div>
+
+               <div class="row pt-3">
+                 <div class="col-sm-12 d-flex justify-content-center">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="termsAndConditionCheckBox" [(ngModel)]="accountSettingsObject.termsAndConditions" (change)="termsAndConditionStatus()">
+                    <label class="form-check-label" for="termsAndConditionCheckBox">
+                      I have read & accept <a>terms and conditions</a>
+                    </label>
+                  </div>
+                 </div>
+               </div>
+             </div>
+            </div>
+           </div>
+         </div>
+
+         <div class="row">
+           <div class="col-sm-12">
+            <div class="row pt-4">
+              <div class="col-sm-12 col-md-6">
+                <button class="btn btn-primary btn-block step-button float-start" *ngIf="currentStep != 1" (click)="goToStep('-')">Previous</button>
+              </div>
+              <div class="col-sm-12 col-md-6 py-md-0 py-3">
+                <button class="btn btn-primary btn-block step-button float-end" (click)="submitRegistrationForm()" [disabled]="!accountSettingsObject.termsAndConditions && currentStep == 4">{{currentStep == 4 ? 'Finish' : 'Next'}}</button>
+              </div>
+
+            </div>
+           </div>
+         </div>
+
+         <div class="row pt-3 pb-5">
+           <div class="col-sm-12 d-flex justify-content-center">
+             <a routerLink="/login">Already have an account? Click here</a>
+           </div>
+         </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

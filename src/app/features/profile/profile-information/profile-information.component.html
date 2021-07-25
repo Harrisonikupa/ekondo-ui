@@ -1,0 +1,157 @@
+<form id="personalDataForm" novalidate>
+  <div class="row mb-3">
+    <div class="col-sm-12 col-md-6" style="border-right: 1px solid lightgrey;">
+      <p class="primary-text step-sub-label bold-text">Personal Info</p>
+      <div class="row mt-3">
+        <div class="col-sm-12 col-md-6 form-floating">
+          <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name*">
+          <label for="firstName">First Name*</label>
+        </div>
+        <div class="col-sm-12 col-md-6 mt-md-0 mt-3 form-floating">
+          <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name*">
+          <label for="lastName">Last Name*</label>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-sm-12 col-md-6 form-floating">
+          <input type="text" class="form-control" id="middleName" name="middleName" placeholder="Middle Name">
+          <label for="middleName">Middle Name</label>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-sm-12 col-md-6 form-floating">
+          <input type="text" class="form-control" id="dateOfBirth" name="dateOfBirth" placeholder="DD/MM/YYYY">
+          <label for="dateOfBirth">Date of Birth*</label>
+        </div>
+        <div class="col-sm-12 col-md-6 mt-md-0 mt-3 form-floating">
+          <select name="stateOfOrigin" id="stateOfOrigin" class="form-select">
+            <option value="">an option</option>
+          </select>
+          <label for="stateOfOrigin">State of Origin*</label>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-sm-12 col-md-6 form-floating">
+          <select name="localGovernmentArea" id="localGovernmentArea" class="form-select">
+            <option value="">an option</option>
+          </select>
+          <label for="localGovernmentArea">Local Government Aea*</label>
+        </div>
+        <div class="col-sm-12 col-md-6 form-floating mt-md-0 mt-3">
+          <select name="nationality" id="nationality" class="form-select">
+            <option value="">an option</option>
+          </select>
+          <label for="nationality">Nationality*</label>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-sm-12 col-md-6 form-floating">
+          <select name="gender" id="gender" class="form-select">
+            <option value="">an option</option>
+          </select>
+          <label for="gender">Gender*</label>
+        </div>
+        <div class="col-sm-12 col-md-6 form-floating mt-md-0 mt-3">
+          <select name="maritalStatus" id="maritalStatus" class="form-select">
+            <option value="">an option</option>
+          </select>
+          <label for="maritalStatus">Marital Status*</label>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <p class="primary-text step-sub-label mt-md-0 mt-4 bold-text">Contact Details</p>
+      <div class="row mt-3">
+        <div class="col-6 col-md-5 form-floating">
+          <input type="text" class="form-control" id="houseNumber" name="houseNumber" placeholder="322">
+          <label for="houseNumber">House Number*</label>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-sm-12 form-floating">
+          <input type="text" class="form-control" id="address" name="address" placeholder="Street">
+          <label for="address">Address*</label>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-sm-12 col-md-6 form-floating">
+          <select name="contactStateOfOrigin" id="contactStateOfOrigin" class="form-select">
+            <option value="">an option</option>
+          </select>
+          <label for="contactStateOfOrigin">State of Origin*</label>
+        </div>
+        <div class="col-sm-12 col-md-6 form-floating mt-md-0 mt-3">
+          <select name="contactLocalGovernmentArea" id="contactLocalGovernmentArea" class="form-select">
+            <option value="">an option</option>
+          </select>
+          <label for="contactLocalGovernmentArea">Local Government Area*</label>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-sm-12 col-md-6 form-floating">
+          <input type="text" class="form-control" id="bvnNumber" name="bvnNumber" placeholder="BVN*">
+          <label for="bvnNumber">Bvn Number*</label>
+        </div>
+        <div class="col-sm-12 col-md-6 form-floating mt-md-0 mt-3">
+          <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Phone Number">
+          <label for="phoneNumber">Phone Number</label>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-sm-12 col-md-6 form-floating">
+          <input type="text" class="form-control" id="emailAddress" name="emailAddress" placeholder="Email Address">
+          <label for="emailAddress">Email Address</label>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <hr>
+  <div class="row mb-5">
+    <div class="col-sm-12 col-md-4 form-floating">
+      <select name="document" id="document" class="form-select mb-2">
+        <option value="Drivers License">Drivers License</option>
+        <option value="Passport ID">Passport ID</option>
+        <option value="NIN">NIN</option>
+      </select>
+      <label for="document">Select Document</label>
+      <div class="document-container">
+        <div class="document-item" (click)="openDocumentUpload()">
+          <img src="../../../../assets/img/icons/file.svg" alt="">
+          <div style="margin-left: 1rem;">
+            <p>Upload Document</p>
+            <small class="empty" *ngIf="documentFileLength == 0">Format must not exceed 50MB</small>
+            <small class="added" *ngIf="documentFileLength > 0">{{documentFileLength}} document added</small>
+            <input type="file" id="documentUpload" name="documentUpload" accept="image/*, .pdf, .doc, .docx" (change)="handleDocumentUpload($event)" hidden>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-4 form-floating">
+      <select name="profileImage" id="profileImage" class="form-select mb-2" disabled>
+        <option value="Profile Iaage">Profile Iaage</option>
+      </select>
+      <label for="profileImage">Profile Iaage</label>
+      <div class="document-container">
+        <div class="document-item" (click)="openProfileUpload()">
+          <img src="../../../../assets/img/icons/file.svg" alt="">
+          <div style="margin-left: 1rem;">
+            <p>Upload Image</p>
+            <small class="empty" *ngIf="profileFileLength == 0">Format must not exceed 50MB</small>
+            <small class="added" *ngIf="profileFileLength > 0">{{profileFileLength}} profile added</small>
+            <input type="file" id="profileUpload" name="profileUpload" accept="image/*, .pdf, .doc, .docx" (change)="handleDocumentUpload($event)" hidden>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

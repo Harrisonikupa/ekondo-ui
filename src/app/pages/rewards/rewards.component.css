@@ -1,0 +1,18 @@
+.reward-total-container {
+  width: auto;
+  height: 4rem;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  box-shadow: 0 0 30px #0a9d5b54 !important;
+}
+
+.reward-total-container span {
+  color: #0A9D5B;
+  font-weight: bold;
+  font-size: 1rem;
+}
+

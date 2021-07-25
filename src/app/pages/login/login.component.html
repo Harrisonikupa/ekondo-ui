@@ -1,0 +1,125 @@
+<div class="container-fluid p-0 overflow-hidden">
+  <div class="row">
+    <div class="col-md-8 d-none d-sm-block p-0">
+      <div class="auth-background">
+        <div class="row" style="position: absolute; z-index: 10;">
+          <div class="col-sm-12 d-flex p-5">
+            <div>
+              <img src="../../../assets/img/logo.png" class="img-fluid center-block d-block mx-auto login-logo-2" alt="">
+            </div>
+          </div>
+        </div>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel"  data-bs-interval="2000">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="overlay"></div>
+              <img src="../../../assets/img/onboarding/1.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h1>Easy Registration</h1>
+                <p>Register anytime, anywhere</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="overlay"></div>
+              <img src="../../../assets/img/onboarding/2.jpg" class="d-block w-100 overflow-hidden" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h1>Loans</h1>
+                <p>Apply for loans with ease</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="overlay"></div>
+              <img src="../../../assets/img/onboarding/3.jpg" class="d-block w-100 overflow-hidden" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h1>Referral Points</h1>
+                <p>Make money from each referral</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="overlay"></div>
+              <img src="../../../assets/img/onboarding/4.jpg" class="d-block w-100 overflow-hidden" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h1>Quick Links</h1>
+                <p>Buy Airtime, Pay Bills & Transfer Funds with the Quick Links</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 p-md-0 px-4">
+      <div class="d-flex align-items-center justify-content-center w-100 h-100">
+        <div style="height: auto;" class="w-100">
+          <div class="row pt-5 pb-5 d-none d-sm-block d-md-none">
+            <div class="col-sm-12">
+              <img src="../../../assets/img/logo.png" class="img-fluid center-block d-block mx-auto login-logo" alt="">
+            </div>
+          </div>
+
+          <div class="row pb-4">
+            <div class="col-sm-12">
+              <p class="text-center mb-0 login-title primary-text">Welcome to Ekondo</p>
+              <p class="text-center mb-0 login-title primary-text">Internet Banking Portal</p>
+            </div>
+          </div>
+
+
+          <div *ngIf="!iForgotPassword.forgotPassword">
+            <div class="row">
+              <div class="col-sm-12 col-md-6 d-grid mx-auto d-block p-0">
+                <app-portal-switcher style="padding: 0rem 1.5rem;"></app-portal-switcher>
+              </div>
+            </div>
+            <form id="loginForm" noValidate>
+              <div class="row pt-5">
+                <div class="col-sm-12 col-md-6 d-grid mx-auto d-block form-floating">
+                  <input type="text" class="form-control" id="email" name="email" placeholder="Mobile Number" [(ngModel)]="loginObject.email" required>
+                  <label for="email">Mobile Number</label>
+                </div>
+              </div>
+
+              <div class="row pt-3">
+                <div class="col-sm-12 col-md-6 form-floating d-grid mx-auto d-block">
+                  <input [type]="isFieldOneTextVisible ? 'text' : 'password'"  class="form-control" id="password" name="password" placeholder="Password" [(ngModel)]="loginObject.password" required>
+                  <label for="email">Password</label>
+                </div>
+              </div>
+
+              <div class="row pt-5">
+                <div class="col-sm-12 col-md-6 d-grid mx-auto d-block">
+                  <button type="button" class="btn btn-primary btn-block" (click)="loginRepresentative()">
+                    Login
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <app-forgot-password *ngIf="iForgotPassword.forgotPassword && !iForgotPassword.readyToReset" (representativeObject)="getRepresentativeObject($event)"></app-forgot-password>
+          <app-reset-login-password *ngIf="iForgotPassword.forgotPassword && iForgotPassword.readyToReset" [representativeObject]="representativeObject"  (resetPasswordResponse)="getResetPasswordResponse($event)"></app-reset-login-password>
+
+          <div class="row pt-2 pb-1">
+            <div class="col-sm-12 d-flex justify-content-center">
+              <a class="text-center" (click)="togglePassword()">{{iForgotPassword.forgotPassword ? 'I know My Password' : 'Forgot Password'}}</a>
+            </div>
+          </div>
+
+          <div class="row pt-5">
+            <div class="col-sm-12 d-flex justify-content-center">
+              <a routerLink="/register" class="text-center">I don't have an internet banking account? Click Here</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

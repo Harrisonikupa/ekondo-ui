@@ -1,0 +1,54 @@
+<div class="row mb-3">
+  <div class="col-sm-12 form-floating">
+    <input type="text" name="investmentType" id="investmentType" placeholder="investmentType" class="form-control" [value]="'EK-CASH'" disabled>
+    <label for="investmentType">Type of investment</label>
+  </div>
+</div>
+
+<div class="row mb-3">
+  <div class="col-sm-12 col-md-6 form-floating">
+    <input type="text" name="amount" id="amount" class="form-control" placeholder="How much are you investing?" [(ngModel)]="investmentParams.amount" (ngModelChange)="calculator()" [min]="50000">
+    <label for="amount">How much are you investing?</label>
+  </div>
+
+  <div class="col-sm-12 col-md-6 form-floating mt-3 mt-md-0">
+    <select name="tenure" id="tenure" class="form-select" [(ngModel)]="investmentParams.tenure" (ngModelChange)="calculator()">
+      <option value="1">1 Month</option>
+      <option value="2">2 Months</option>
+      <option value="3">3 Months</option>
+      <option value="4">4 Months</option>
+      <option value="5">5 Months</option>
+      <option value="6">6 Months</option>
+      <option value="7">7 Months</option>
+      <option value="8">8 Months</option>
+      <option value="9">9 Months</option>
+      <option value="10">10 Months</option>
+      <option value="11">11 Months</option>
+      <option value="12">12 Months</option>
+    </select>
+    <label for="tenure">Select investment duration</label>
+  </div>
+</div>
+
+<hr>
+<div class="row mb-3">
+  <div class="col-sm-12 col-md-4 form-floating">
+    <input type="text" name="interest" id="interest" placeholder="Interest" class="form-control" [value]="interest + '%'" disabled>
+    <label for="interest">Interest</label>
+  </div>
+  <div class="col-sm-12 col-md-4 form-floating mt-3 mt-md-0">
+    <input type="text" name="interestAccruable" id="interestAccruable" class="form-control" placeholder="Interest accruable" [value]="accruedInterest" disabled>
+    <label for="interestAccruable">Interest accruable</label>
+  </div>
+  <div class="col-sm-12 col-md-4 form-floating mt-3 mt-md-0">
+    <input type="text" name="returnOnInvestment" id="returnOnInvestment" class="form-control" placeholder="Return on investment" [value]="returnOnInvestment" disabled>
+    <label for="returnOnInvestment">Return on investment</label>
+  </div>
+</div>
+
+  <div class="row">
+    <div class="d-grid gap-3 d-md-flex justify-content-md-end">
+      <button type="button" class="btn btn-primary">Create</button>
+    </div>
+  </div>
+

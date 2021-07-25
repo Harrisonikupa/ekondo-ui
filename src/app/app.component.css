@@ -1,0 +1,72 @@
+.wrapper {
+  width: 100%;
+}
+
+#content {
+  width: 100%;
+  /* padding: 0; */
+  min-height: 100vh;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.page-padding {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+/*  X-Small devices (portrait phones, less than 576px)
+ No media query for `xs` since this is the default in Bootstrap */
+
+/*  Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .page-padding {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+/*  Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .page-padding {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+/*  Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .page-padding {
+    padding-top: 1rem;
+    padding-left: 8.5rem;
+    padding-right: 8.5rem;
+    padding-bottom: 1rem;
+  }
+}
+
+/*  X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .page-padding {
+    padding-top: 1rem;
+    padding-left: 8.5rem;
+    padding-right: 8.5rem;
+    padding-bottom: 1rem;
+  }
+}
+
+/*  XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .page-padding {
+    padding-top: 1rem;
+    padding-left: 8.5rem;
+    padding-right: 8.5rem;
+    padding-bottom: 1rem;
+  }
+}

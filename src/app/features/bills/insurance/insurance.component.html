@@ -1,0 +1,114 @@
+<form id="insuranceForm">
+  <div class="insurance-container">
+    <div class="row pb-3">
+      <div class="col-sm-12 form-floating">
+        <select class="form-select" name="account" id="account">
+          <option value="a">Account A</option>
+        </select>
+        <label for="account">Select Account</label>
+      </div>
+    </div>
+
+    <div class="row pb-3">
+      <div class="col-sm-12 form-floating">
+        <select class="form-select" name="insurance" id="insurance">
+          <option value="a">Insurance A</option>
+        </select>
+        <label for="insurance">Select Insurance</label>
+      </div>
+    </div>
+
+    <div class="row pb-3">
+      <div class="col-sm-12 form-floating">
+        <select class="form-select" name="insurancePlan" id="insurancePlan">
+          <option value="a">Insurance Plan A</option>
+        </select>
+        <label for="insurancePlan">Select Insurance Plan</label>
+      </div>
+    </div>
+
+    <div class="row pb-3">
+      <div class="col-sm-12 form-floating">
+        <input type="text" class="form-control" placeholder="Amount" name="amount" disabled>
+        <label for="amount">Amount</label>
+      </div>
+    </div>
+
+    <div class="row pb-3">
+      <div class="col-sm-12 form-floating">
+        <input type="text" class="form-control" placeholder="Mobile Number" name="mobileNumber" minlength="11" maxlength="11">
+        <label for="mobileNumber">Mobile Number</label>
+      </div>
+    </div>
+
+    <div class="row pb-3">
+      <div class="col-sm-12 form-floating">
+        <input type="text" class="form-control" placeholder="Insured Name" name="insuredName">
+        <label for="insuredName">Insured Name</label>
+      </div>
+    </div>
+
+    <div class="row pb-3">
+      <div class="col-sm-12 form-floating">
+        <input type="text" class="form-control" placeholder="Engine Number" name="engineNumber">
+        <label for="engineNumber">Engine Number</label>
+      </div>
+    </div>
+
+    <div class="row pb-3">
+      <div class="col-sm-12 form-floating">
+        <input type="text" class="form-control" placeholder="Chasis Number" name="chasisNumber">
+        <label for="chasisNumber">Chasis Number</label>
+      </div>
+    </div>
+
+    <div class="row pb-3">
+      <div class="col-sm-12 form-floating">
+        <input type="text" class="form-control" placeholder="Plate Number" name="plateNumber">
+        <label for="plateNumber">Plate Number</label>
+      </div>
+    </div>
+
+    <div class="row pb-3">
+      <div class="col-sm-12 form-floating">
+        <input type="text" class="form-control" placeholder="Vehicle Make" name="vehicleMake">
+        <label for="vehicleMake">Vehicle Make</label>
+      </div>
+    </div>
+
+    <div class="row pb-3">
+      <div class="col-sm-12 form-floating">
+        <input type="text" class="form-control" placeholder="Vehicle Color" name="vehicleColor">
+        <label for="vehicleColor">Vehicle Color</label>
+      </div>
+    </div>
+
+    <div class="row pb-3">
+      <div class="col-sm-12 form-floating">
+        <input type="text" class="form-control" placeholder="Vehicle Model" name="vehicleModel">
+        <label for="vehicleModel">Vehicle Model</label>
+      </div>
+    </div>
+
+    <div class="row pb-3">
+      <div class="col-sm-12 form-floating">
+        <input type="text" class="form-control" placeholder="Year of Make" name="yearOfMake">
+        <label for="yearOfMake">Year Of Make</label>
+      </div>
+    </div>
+
+    <div class="row pb-3">
+      <div class="col-sm-12 form-floating">
+        <input type="text" class="form-control" placeholder="Contact Address" name="contactAddress">
+        <label for="contactAddress">Contact Address</label>
+      </div>
+    </div>
+  </div>
+  <div class="row pt-3">
+    <div class="d-grid gap-3 d-md-flex justify-content-md-end">
+      <button type="button" class="btn btn-primary" routerLink="/dashboard">Cancel</button>
+      <button type="button" class="btn btn-primary">Confirm Purchase </button>
+      <button type="button" class="btn btn-primary">Schedule Purchase</button>
+    </div>
+  </div>
+</form>

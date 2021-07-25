@@ -1,0 +1,123 @@
+<div class="row">
+  <div class="col-sm-8">
+    <div class="nav-container">
+      <ul class="nav nav-tabs mb-4">
+        <li class="nav-item col p-0" (click)="gotoTab(1)">
+          <a class="nav-link" [class.active]="currentTab == 1" data-toggle="tab" id="navStep1">
+            <i-feather name="credit-card"></i-feather>
+            &nbsp;&nbsp;
+            Airtime
+          </a>
+        </li>
+        <li class="nav-item col p-0" (click)="gotoTab(2)">
+          <a class="nav-link" [class.active]="currentTab == 2" data-toggle="tab" id="navStep2">
+            <i-feather name="bar-chart"></i-feather>
+            &nbsp;&nbsp;
+            Data
+          </a>
+        </li>
+        <li class="nav-item col p-0" (click)="gotoTab(3)">
+          <a class="nav-link" [class.active]="currentTab == 3" data-toggle="tab" id="navStep3">
+            <i-feather name="tv"></i-feather>
+            &nbsp;&nbsp;
+            Cable
+          </a>
+        </li>
+        <li class="nav-item col p-0" (click)="gotoTab(4)">
+          <a class="nav-link" [class.active]="currentTab == 4" data-toggle="tab" id="navStep4">
+            <i-feather name="sun"></i-feather>
+            &nbsp;&nbsp;
+            Electricity
+          </a>
+        </li>
+        <li class="nav-item col p-0" (click)="gotoTab(5)">
+          <a class="nav-link" [class.active]="currentTab == 5" data-toggle="tab" id="navStep4">
+            <i-feather name="book-open"></i-feather>
+            &nbsp;&nbsp;
+            Education
+          </a>
+        </li>
+        <li class="nav-item col p-0" (click)="gotoTab(6)">
+          <a class="nav-link" [class.active]="currentTab == 6" data-toggle="tab" id="navStep4">
+            <i-feather name="shield"></i-feather>
+            &nbsp;&nbsp;
+            Insurance
+          </a>
+        </li>
+      </ul>
+
+     <div class="row">
+       <div class="col-sm-12">
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade" id="step1" [class.active]="currentTab == 1" [class.show]="currentTab == 1" role="tab-panel">
+            <div class="row">
+              <div class="col-sm-12 d-md-flex justify-content-md-center">
+                <app-airtime></app-airtime>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="step2" [class.active]="currentTab == 2" [class.show]="currentTab == 2" role="tab-panel">
+            <div class="row">
+              <div class="col-sm-12 d-md-flex justify-content-md-center">
+                <app-data></app-data>
+              </div>
+            </div>
+         </div>
+         <div class="tab-pane fade" id="step3" [class.active]="currentTab == 3" [class.show]="currentTab == 3" role="tab-panel">
+           <div class="row">
+             <div class="col-sm-12 d-md-flex justify-content-md-center">
+              <app-cable></app-cable>
+             </div>
+           </div>
+         </div>
+         <div class="tab-pane fade" id="step4" [class.active]="currentTab == 4" [class.show]="currentTab == 4" role="tab-panel">
+          <div class="row">
+            <div class="col-sm-12 d-md-flex justify-content-md-center">
+              <app-electricity></app-electricity>
+            </div>
+          </div>
+         </div>
+         <div class="tab-pane fade" id="step4" [class.active]="currentTab == 5" [class.show]="currentTab == 5" role="tab-panel">
+          <div class="row">
+            <div class="col-sm-12 d-md-flex justify-content-md-center">
+              <app-education></app-education>
+            </div>
+          </div>
+         </div>
+         <div class="tab-pane fade" id="step4" [class.active]="currentTab == 6" [class.show]="currentTab == 6" role="tab-panel">
+          <div class="row">
+            <div class="col-sm-12 d-md-flex justify-content-md-center">
+              <app-insurance></app-insurance>
+            </div>
+          </div>
+         </div>
+        </div>
+       </div>
+     </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-4 pt-md-0 pt-3">
+    <div class="recent-container">
+      <div class="recent-header">
+        <div class="recent-title">
+        <span>Recent Bill Payemts</span>
+        </div>
+      </div>
+      <div class="recent-body">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+
+      </div>
+    </div>
+  </div>
+</div>
