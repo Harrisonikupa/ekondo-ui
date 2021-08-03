@@ -7,10 +7,15 @@ import { SharedModule } from 'src/app/shared/modules/shared/shared.module';
 import { ProfileInformationComponent } from 'src/app/features/profile/profile-information/profile-information.component';
 import { WorkAndEducationComponent } from 'src/app/features/profile/work-and-education/work-and-education.component';
 import { NextOfKinComponent } from 'src/app/features/profile/next-of-kin/next-of-kin.component';
+import { GuarantorInformationComponent } from 'src/app/features/profile/guarantor-information/guarantor-information.component';
 
 
 @NgModule({
-  declarations: [ProfileComponent, ProfileInformationComponent, WorkAndEducationComponent, NextOfKinComponent],
+  declarations: [ProfileComponent,
+    ProfileInformationComponent,
+    WorkAndEducationComponent,
+    NextOfKinComponent,
+    GuarantorInformationComponent],
   imports: [
     CommonModule,
     ProfileRoutingModule,

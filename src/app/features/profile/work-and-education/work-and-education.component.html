@@ -2,27 +2,47 @@
   <div class="row mb-3">
     <div class="col-sm-12 form-floating">
       <select name="level-of-work" id="level-of-work" class="form-select" [(ngModel)]="levelOfWork" (change)="clearObjects()">
-        <option value="entrepreneur">Entrepreneur</option>
-        <option value="microTrader">Micro Trader</option>
-        <option value="salaryEarner">Salary Earner</option>
-        <option value="student">Student</option>
+        <option value="selfemployed">Self Employed</option>
+        <option value="employed">Employed</option>
+        <option value="unemployed">Unemployed</option>
       </select>
       <label for="levelOfWork">Job Type</label>
     </div>
   </div>
 
-  <div *ngIf="levelOfWork == 'entrepreneur'">
+  <div *ngIf="levelOfWork == 'selfemployed'">
     <div class="row mb-3">
       <div class="col-sm-12 col-md-6 form-floating">
         <input type="text" class="form-control" placeholder="Business Name" id="businessName" name="businessName">
         <label for="businessName">Business Name</label>
       </div>
       <div class="col-sm-12 col-md-6 form-floating mt-3 mt-md-0">
-        <input type="text" class="form-control" placeholder="Monthly Earnings" id="monthlyEarnings" name="monthlyEarnings">
+        <input type="text" class="form-control" placeholder="Monthly Earnings" id="monthlyEarnings" name="monthlyEarnings" prefix="₦" mask="separator.2" thousandSeparator=",">
         <label for="monthlyEarnings">Monthly Earnings</label>
       </div>
     </div>
 
+    <div class="row mb-3">
+      <div class="col-sm-12 col-md-6 form-floating mt-3 mt-md-0">
+        <input type="text" class="form-control" placeholder="Monthly Expenditure" id="monthlyExpenditure" name="monthlyExpenditure" prefix="₦" mask="separator.2" thousandSeparator=",">
+        <label for="monthlyExpenditure">Monthly Expenditure</label>
+      </div>
+      <div class="col-sm-12 col-md-6 form-floating">
+        <select name="isBusinessRegistered" id="isBusinessRegistered" class="form-select" [(ngModel)]="isBusinessRegistered" (ngModelChange)="showRcField()">
+          <option value="no">No</option>
+          <option value="yes">Yes</option>
+        </select>
+        <label for="isBusinessRegistered">Is Your Business Registered?</label>
+      </div>
+
+    </div>
+
+    <div class="row mb-3" *ngIf="showRcNumberField">
+      <div class="col-sm-12 col-md-6 form-floating mt-3 mt-md-0">
+        <input type="text" class="form-control" placeholder="RC Number" id="rcNumber" name="rcNumber">
+        <label for="rcNumber">RC Number</label>
+      </div>
+    </div>
     <div class="row mb-3">
       <div class="col-sm-12 col-md-6 form-floating">
         <select name="businessType" id="businessType" class="form-select">
@@ -58,55 +78,24 @@
         </select>
         <label for="qualification">Qualification</label>
       </div>
-    </div>
-  </div>
-
-
-  <div *ngIf="levelOfWork == 'microTrader'">
-    <div class="row mb-3">
-      <div class="col-sm-12 col-md-6 form-floating">
-        <select name="businessStage" id="businessStage" class="form-select" class="form-select">
-          <option value="new">New</option>
-          <option value="existing">Existing</option>
-        </select>
-        <label for="businessStage">Business Stage</label>
-      </div>
-      <div class="col-sm-12 col-md-6 mt-3 mt-md-0 form-floating">
-        <input type="text" class="form-control" placeholder="Occupation" id="occupation" name="occupation">
-        <label for="occupation">Occupation</label>
-      </div>
-    </div>
-
-    <div class="row mb-3">
-      <div class="col-sm-12 col-md-6 form-floating">
-        <input type="text" class="form-control" placeholder="Business Address" id="businessAddress" name="businessAddress">
-        <label for="businessAddress">Business Address</label>
-      </div>
       <div class="col-sm-12 col-md-6 form-floating mt-3 mt-md-0">
-        <input type="text" class="form-control" placeholder="Monthly Earning" id="monthlyEarning" name="monthlyEarning">
-        <label for="montlyEarning">Monthly Earning</label>
+        <input type="text" class="form-control" placeholder="How long have you been in your location?" id="timeAtBusinessLocation" name="timeAtBusinessLocation">
+        <label for="timeAtBusinessLocation">How long have you been in your location?</label>
       </div>
     </div>
 
     <div class="row mb-3">
-      <div class="col-sm-12 col-md-6 form-floating">
-        <input type="text" class="form-control" placeholder="Monthly Expenditure" id="monthlyExpenditure" name="monthlyExpenditure">
-        <label for="monthlyExpenditure">Monthly Expenditure</label>
-      </div>
-      <div class="col-sm-12 col-md-6 mt-3 mt-md-0 form-floating">
-        <select name="qualification" id="qualification" class="form-select">
-          <option value="1">BSC</option>
-        </select>
-        <label for="qualification">Qualification</label>
+      <div class="col-sm-12 col-md-6 form-floating mt-3 mt-md-0">
+        <input type="text" class="form-control" placeholder="Tax ID Number" id="taxIdNumber" name="taxIdNumber">
+        <label for="taxIdNumber">Tax ID Number</label>
       </div>
     </div>
   </div>
 
-
-  <div *ngIf="levelOfWork == 'salaryEarner'">
+  <div *ngIf="levelOfWork == 'employed'">
     <div class="row mb-3">
       <div class="col-sm-12 col-md-6 form-floating">
-        <input type="text" class="form-control" placeholder="Monthly Income" id="monthlyIncome" name="monthlyIncome">
+        <input type="text" class="form-control" placeholder="Monthly Income" id="monthlyIncome" name="monthlyIncome" prefix="₦" mask="separator.2" thousandSeparator=",">
         <label for="monthlyIncome">Monthly Income</label>
       </div>
       <div class="col-sm-12 col-md-6 form-floating mt-3 mt-md-0">
@@ -140,32 +129,38 @@
         <label for="qualification">Qualification</label>
       </div>
     </div>
-  </div>
-  <div *ngIf="levelOfWork == 'student'">
-    <div class="row mb-3">
-      <div class="col-sm-12 col-md-6 form-floating">
-        <select name="level" id="level" class="form-select">
-          <option value="primary">Primary</option>
-          <option value="secondary">Secondary</option>
-          <option value="tertiary">Tertiary</option>
-        </select>
-        <label for="label">Label</label>
-      </div>
-      <div class="col-sm-12 col-md-6 form-floating mt-3 mt-md-0">
-        <input type="text" class="form-control" placeholder="School Name" id="nameOfSchool" name="nameOfSchool">
-        <label for="nameOfSchool">School Name</label>
-      </div>
-    </div>
 
     <div class="row mb-3">
       <div class="col-sm-12 col-md-6 form-floating">
-        <input type="text" class="form-control" placeholder="Your Class" id="currentEducation" name="currentEducation">
-        <label for="currentEducation">Your Class</label>
+        <input type="text" class="form-control" placeholder="Monthly Expenditure" id="monthlyExpenditure" name="monthlyExpenditure" prefix="₦" mask="separator.2" thousandSeparator=",">
+        <label for="monthlyExpenditure">Monthly Expenditure</label>
       </div>
-      <div class="col-sm-12 col-md-6 mt-3 mt-md-0 form-floating">
-        <input type="text" class="form-control" placeholder="Schools' Address" id="schoolAddress" name="schoolAddress">
-        <label for="schoolAddress">School Address</label>
+      <div class="col-sm-12 col-md-6 mt-3 mt-md-0">
+        <div class="document-container">
+          <div class="document-item" (click)="openDocumentUpload()">
+            <img src="../../../../assets/img/icons/file.svg" alt="">
+            <div style="margin-left: 1rem;">
+              <p>Upload Staff ID</p>
+              <small class="empty" *ngIf="documentFileLength == 0">Format must not exceed 50MB</small>
+              <small class="added" *ngIf="documentFileLength > 0">{{documentFileLength}} document added</small>
+              <input type="file" id="documentUpload" name="documentUpload" accept="image/*, .pdf, .doc, .docx" (change)="handleDocumentUpload($event)" hidden>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
 </form>
+
+<!-- Self employed -->
+<!-- Monthly earning, monthly expenditure, is business registered (if yes, provide rc number), How long have you been in your location, Tax id number. -->
+
+<!-- Employeed -->
+<!-- Monthly expenditure, upload staff ID -->
+
+<!-- Guarantor -->
+<!-- Include in loan process -->
+
+<!-- Personal Info -->
+<!-- Facebook, Twitter, Instagram -->

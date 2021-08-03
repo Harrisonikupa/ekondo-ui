@@ -13,7 +13,6 @@
               <button class="btn btn-primary" (click)="toggleCreateLoan()">{{isCreateLoan ? 'Back' : 'New Loan'}}</button>
             </div>
           </div>
-
           <div class="row justify-content-center">
             <div class="col-sm-12 col-md-6">
               <div class="loan-container card-shadow pointer" *ngIf="!isCreateLoan">
@@ -28,11 +27,11 @@
                 <div class="d-flex justify-content-between mb-2">
                   <div>
                     <p class="text text-start">Loan Amount</p>
-                    <p class="value text-start">N100,000.00</p>
+                    <p class="value text-start">₦{{'250000.00' | mask: 'separator.2':','}}</p>
                   </div>
                   <div>
                     <p class="text text-end">Total Loan Due</p>
-                    <p class="value text-end">N100,300.00</p>
+                    <p class="value text-end">₦{{'250500.00' | mask: 'separator.2':','}}</p>
                   </div>
 
                 </div>
@@ -52,15 +51,15 @@
                 <div class="d-flex justify-content-between mb-2">
                   <div>
                     <p class="text text-start">Monthly Repayment</p>
-                    <p class="value text-start">N300.00</p>
+                    <p class="value text-start">₦{{'25000.00' | mask: 'separator.2':','}}</p>
                   </div>
                   <div>
                     <p class="text text-center">Total Amount Paid</p>
-                    <p class="value text-center">N300.00</p>
+                    <p class="value text-center">₦{{'250.00' | mask: 'separator.2':','}}</p>
                   </div>
                   <div>
                     <p class="text text-end">Outstanding Balance</p>
-                    <p class="value text-end">N300.00</p>
+                    <p class="value text-end">₦{{'25000.00' | mask: 'separator.2':','}}</p>
                   </div>
                 </div>
               </div>
@@ -69,7 +68,6 @@
               <app-view-schedule *ngIf="isCreateLoan && currentStep == 2"></app-view-schedule>
             </div>
           </div>
-
         </div>
       </div>
     </div>

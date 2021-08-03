@@ -21,7 +21,6 @@ export class ProfileInformationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   openDocumentUpload(): void {
     $('#documentUpload').trigger('click');
   }
@@ -90,5 +89,4 @@ export class ProfileInformationComponent implements OnInit {
       reader.readAsDataURL(fileInput.target.files[0]);
     }
   }
-
 }

@@ -6,7 +6,7 @@ app-next-of-kin, app-work-and-education {
   width: 60%;
 }
 
-app-profile-information {
+app-profile-information, app-guarantor-information {
   width: 100%;
 }
 

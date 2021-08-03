@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Camera, Heart, Github, Menu, Eye, EyeOff, Tv, Sun, BookOpen, Shield, Smartphone,
-  Wifi, PlusCircle, MinusCircle, CreditCard, BarChart, Shuffle, Trash } from 'angular-feather/icons';
+  Wifi, PlusCircle, MinusCircle, CreditCard, BarChart, Shuffle, Trash, Users } from 'angular-feather/icons';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
 import { FeatherModule } from 'angular-feather';
 import { DataTablesModule } from 'angular-datatables';
@@ -16,8 +16,7 @@ import { AuthService } from '../../services/auth.service';
 import { NgxImageCompressService } from 'ngx-image-compress';
 
 
-const maskConfig: Partial<IConfig> = {
-};
+const maskConfig: Partial<IConfig> = {};
 const icons = {
   Camera,
   Heart,
@@ -32,7 +31,12 @@ const icons = {
   Shield,
   Smartphone,
   Wifi,
-  MinusCircle, CreditCard, BarChart, Shuffle, Trash
+  MinusCircle,
+  CreditCard,
+  BarChart,
+  Shuffle,
+  Trash,
+  Users
 };
 
 @NgModule({

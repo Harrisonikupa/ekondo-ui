@@ -13,6 +13,7 @@ import { LoginModule } from './pages/login/login.module';
 import { RegisterModule } from './pages/register/register.module';
 import { DashboardModule } from './pages/dashboard/dashboard.module';
 import { LayoutModule } from './layouts/layout.module';
+import { GuarantorInformationComponent } from './features/profile/guarantor-information/guarantor-information.component';
 
 @NgModule({
   declarations: [

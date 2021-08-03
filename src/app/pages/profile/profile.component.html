@@ -58,8 +58,9 @@
 
        <div class="row mb-3 mb-md-0" style="margin: 5px;">
           <div class="d-grid gap-3 d-md-flex justify-content-md-between">
-            <button type="button" class="btn btn-primary">Previous</button>
-            <button type="button" class="btn btn-primary">Next</button>
+            <button type="button" class="btn btn-primary" *ngIf="currentTab > 1" (click)="navigateTab('-')">Previous</button>
+            <div *ngIf="currentTab == 1"> &nbsp;  </div>
+            <button type="button" class="btn btn-primary" (click)="navigateTab('+')">{{currentTab == 3 ? 'Done' : 'Next'}}</button>
           </div>
         </div>
       </div>

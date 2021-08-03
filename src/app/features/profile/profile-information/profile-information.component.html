@@ -18,6 +18,10 @@
           <input type="text" class="form-control" id="middleName" name="middleName" placeholder="Middle Name">
           <label for="middleName">Middle Name</label>
         </div>
+        <div class="col-sm-12 col-md-6 form-floating">
+          <input type="text" class="form-control" id="emailAddress" name="emailAddress" placeholder="Email Address">
+          <label for="emailAddress">Email Address</label>
+        </div>
       </div>
 
       <div class="row mt-3">
@@ -60,6 +64,24 @@
             <option value="">an option</option>
           </select>
           <label for="maritalStatus">Marital Status*</label>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-sm-12 col-md-6 form-floating">
+          <input type="text" class="form-control" id="facebookUrl" name="facebookUrl" placeholder="Facebook Link">
+          <label for="facebookUrl">Facebook Link</label>
+        </div>
+        <div class="col-sm-12 col-md-6 form-floating">
+          <input type="text" class="form-control" id="twitterUrl" name="twitterUrl" placeholder="Twitter Link">
+          <label for="twitterUrl">Twitter Link</label>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-sm-12 col-md-6 form-floating">
+          <input type="text" class="form-control" id="instagramUrl" name="instagramUrl" placeholder="Instagram Link">
+          <label for="instagramUrl">Instagram Link</label>
         </div>
       </div>
 
@@ -138,9 +160,9 @@
     </div>
     <div class="col-sm-12 col-md-4 form-floating">
       <select name="profileImage" id="profileImage" class="form-select mb-2" disabled>
-        <option value="Profile Iaage">Profile Iaage</option>
+        <option value="Profile Iaage">Profile Image</option>
       </select>
-      <label for="profileImage">Profile Iaage</label>
+      <label for="profileImage">Profile Image</label>
       <div class="document-container">
         <div class="document-item" (click)="openProfileUpload()">
           <img src="../../../../assets/img/icons/file.svg" alt="">
